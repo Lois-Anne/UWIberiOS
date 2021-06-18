@@ -10,7 +10,7 @@ import Foundation
 let app_id = ""
 let rest_key = ""
 let BASE_URL = "https://shaniscato.pythonanywhere.com/api/"
-let REGISTER_URL = "\(BASE_URL)/register"
+let REGISTER_URL = "\(BASE_URL)/register/"
 let LOCATION_URL = "\(BASE_URL)/location"
 let LOGIN_URL = "\(BASE_URL)/login/"
 let BASE_USER_URL = "\(BASE_URL)/user/"

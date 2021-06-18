@@ -36,13 +36,32 @@ extension RegisterViewController{
         guard let phoneNum = Int(phoneNumText) else { return }
         
 //        guard let date = self.dobPicker. else { return }
-        
-        let register = RegisterModel(name: username, email: email, password: password, firstName: fName, lastName: lName, username: username)
-        let client = ClientModel(username: username, date_of_birth: "", phone_number: phoneNum)
+        let parameters = [
+            "is_client": "True",
+            "username": username,
+            "email": email,
+            "first_name": fName,
+            "last_name": lName,
+            "password": password,
+            "Client": [
+                "user": username,
+                "gender": "F",
+                "date_of_birth": DateFormatter().string(from: dobPicker.date),
+                "phone_number": phoneNumText,
+                "address": "Town"
+            ]
+        ] as [String: Any]
+//        let registerer = NewUser(
+//                isClient: true, username: username, email: email, firstName: fName, lastName: lName, password: password,
+//                client: Client(user: username, dateOfBirth: DateFormatter().string(from: dobPicker.date), gender: "F", phoneNumber: phoneNum, address: ""))
+        let registerRequest = AF.request(REGISTER_URL, method: .post, parameters: parameters)
 
-        let request = AF.request(REGISTER_URL, method: .post)
-//        request.responseDecodable(of: RegisterUser)
-        APIManager.shareInstance.callRegisterAPI(register: register)
+
+        registerRequest.responseDecodable(of: NewUser.self) { response in
+            guard let registerResponse = response.value else { return }
+            print(registerResponse)
+
+        }
         
         
     }

@@ -20,11 +20,10 @@ struct User: Decodable {
 }
 
 // MARK: - Client
-struct Client: Decodable {
+struct Client: Codable {
     let user, dateOfBirth, gender: String
     let phoneNumber: Int
     let address: String
-    let rideSet: [RideSet]
 
     enum CodingKeys: String, CodingKey {
         case user
@@ -32,12 +31,11 @@ struct Client: Decodable {
         case gender
         case phoneNumber = "phone_number"
         case address
-        case rideSet = "ride_set"
     }
 }
 
 // MARK: - RideSet
-struct RideSet: Decodable {
+struct RideSet: Codable {
     let price: Int
     let time: String
     let numPassengers: Int

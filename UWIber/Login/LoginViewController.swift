@@ -15,11 +15,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
-    
-    
-    
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserDefaults.standard.string(forKey: "TOKEN") != "" {
+            // GO TO HOME SCREEN IF TOKEN IS FOUND
+        }
         
     }
     @IBAction func loginDidTap(_ sender: Any) {
