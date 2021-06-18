@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class RegisterViewController: UIViewController{
     @IBOutlet weak var usernameText: UITextField!
@@ -38,7 +39,9 @@ extension RegisterViewController{
         
         let register = RegisterModel(name: username, email: email, password: password, firstName: fName, lastName: lName, username: username)
         let client = ClientModel(username: username, date_of_birth: "", phone_number: phoneNum)
-        
+
+        let request = AF.request(REGISTER_URL, method: .post)
+        request.responseDecodable(of: RegisterUser)
         APIManager.shareInstance.callRegisterAPI(register: register)
         
         

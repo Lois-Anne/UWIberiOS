@@ -51,7 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
         homeMap.setRegion(region, animated: true)
     }
     func placePins() {
-        let request = AF.request("https://shaniscato.pythonanywhere.com/api/location")
+        let request = AF.request(LOCATION_URL)
         request.responseDecodable(of: Locations.self) { [self] (response) in
             guard let locations = response.value else { return }
             for location in locations.locations {
