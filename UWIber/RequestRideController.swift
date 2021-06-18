@@ -11,8 +11,9 @@ import MapKit
 
 class RequestRideController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var pickupField: UITextField!
-    @IBOutlet weak var dropoffField: UITextField!
+    @IBOutlet weak var pickupPicker: UIPickerView!
+    @IBOutlet weak var dropoffPicker: UIPickerView!
+    
     @IBOutlet weak var carType: UILabel!
     @IBOutlet weak var carsPicker: UIPickerView!
     @IBOutlet weak var rideBtn: UIButton!
@@ -24,10 +25,35 @@ class RequestRideController: UIViewController, MKMapViewDelegate, UITextFieldDel
         carType.layer.shadowOpacity = 0.45
         carType.layer.shadowOffset = CGSize(width: 0, height: 0)
         carType.layer.masksToBounds = false
-
-        if pickupField.text != pickupField.text && pickupField.text != "" && dropoffField.text != "" {
-            rideBtn.isHidden = false
-        }
+        
+        pickupPicker.dataSource = self
+        pickupPicker.delegate = self
+        
+        dropoffPicker.dataSource = self
+        dropoffPicker.delegate = self
+//
+//        if pickupField.text != pickupField.text && pickupField.text != "" && dropoffField.text != "" {
+//            rideBtn.isHidden = false
+//        }
     }
     
+}
+extension RequestRideController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    
+    
+}
+extension RequestRideController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == pickupPicker {
+            return "true"
+        }
+        return "false"
+    }
 }

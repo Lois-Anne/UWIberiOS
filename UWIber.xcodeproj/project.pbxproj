@@ -12,7 +12,7 @@
 		46E807402679476B00E24445 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E8073F2679476B00E24445 /* Constant.swift */; };
 		46E807432679485A00E24445 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E807422679485A00E24445 /* RegisterModel.swift */; };
 		46E80746267949F300E24445 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E80745267949F300E24445 /* APIManager.swift */; };
-		E8B3B8A4267C32DC0044388C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 46E8074826794C5800E24445 /* Alamofire */; };
+		E8B3B8A4267C32DC0044388C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46E8074826794C5800E24445 /* SwiftPackageProductDependency */; };
 		E8CF16232648B54A00DA9F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF16222648B54A00DA9F54 /* AppDelegate.swift */; };
 		E8CF16252648B54A00DA9F54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF16242648B54A00DA9F54 /* SceneDelegate.swift */; };
 		E8CF16272648B54A00DA9F54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF16262648B54A00DA9F54 /* ViewController.swift */; };
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B3B8A4267C32DC0044388C /* Alamofire in Frameworks */,
+				E8B3B8A4267C32DC0044388C /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +95,19 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
+		516B108B27378A89A4DE208F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E8CF16162648B54900DA9F54 = {
 			isa = PBXGroup;
 			children = (
 				E8CF16212648B54A00DA9F54 /* UWIber */,
 				E8CF16202648B54A00DA9F54 /* Products */,
+				516B108B27378A89A4DE208F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,7 +158,7 @@
 			);
 			name = UWIber;
 			packageProductDependencies = (
-				46E8074826794C5800E24445 /* Alamofire */,
+				46E8074826794C5800E24445 /* SwiftPackageProductDependency */,
 			);
 			productName = UWIber;
 			productReference = E8CF161F2648B54A00DA9F54 /* UWIber.app */;
@@ -180,7 +188,7 @@
 			);
 			mainGroup = E8CF16162648B54900DA9F54;
 			packageReferences = (
-				46E8074726794C5800E24445 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				46E8074726794C5800E24445 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = E8CF16202648B54A00DA9F54 /* Products */;
 			projectDirPath = "";
@@ -425,7 +433,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		46E8074726794C5800E24445 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		46E8074726794C5800E24445 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -436,9 +444,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		46E8074826794C5800E24445 /* Alamofire */ = {
+		46E8074826794C5800E24445 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46E8074726794C5800E24445 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 46E8074726794C5800E24445 /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
