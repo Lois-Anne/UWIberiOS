@@ -26,6 +26,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     let boldStyle = UIFont.boldSystemFont(ofSize: 16.0)
     let regularStyle = UIFont.systemFont(ofSize: 15.0)
     var pickupCounter = 0
+    var currentBluePin: MKMarkerAnnotationView = MKMarkerAnnotationView()
+    var currentGreenPin: MKMarkerAnnotationView = MKMarkerAnnotationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,13 +93,18 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
                 _ = dropoffText.text
                 let markerText = view.annotation?.title
                 if let dropoffSelector = markerText {
-                   dropoffText.text = dropoffSelector
+                    dropoffText.text = dropoffSelector
                 }
                 if let view = view as? MKMarkerAnnotationView {
-                    view.markerTintColor = UIColor.green
-                    
+                    currentGreenPin.markerTintColor = UIColor.systemRed
+                    view.markerTintColor = UIColor.systemGreen
+                    currentGreenPin = view
+
                 }
             }
+        }
+        if dropoffText.text != pickupText.text && pickupText.text != "" && dropoffText.text != "" {
+            rideBtn.isHidden = false
         }
     }
     
