@@ -13,6 +13,7 @@
 		46E80746267949F300E24445 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E80745267949F300E24445 /* APIManager.swift */; };
 		62DF054E83DFB336802A032C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF00D7AF9031EF472A208D /* LoginResponse.swift */; };
 		62DF0E04655A3CD6D8366AEF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF0A0DEF8FD4E17AB935D6 /* Location.swift */; };
+		62DF0E1D6991E7A68923D1FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF0AA4FCD14B435F5BD417 /* LoginViewController.swift */; };
 		62DF0F8062A5850E4FCB5509 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF0E9C674A27A6FF157655 /* User.swift */; };
 		E8B3B8A4267C32DC0044388C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 46E8074826794C5800E24445 /* Alamofire */; };
 		E8CF16232648B54A00DA9F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF16222648B54A00DA9F54 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		46E80745267949F300E24445 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		62DF00D7AF9031EF472A208D /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		62DF0A0DEF8FD4E17AB935D6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		62DF0AA4FCD14B435F5BD417 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62DF0E9C674A27A6FF157655 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8CF161F2648B54A00DA9F54 /* UWIber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UWIber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF16222648B54A00DA9F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,13 +61,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46E80738267946E300E24445 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		46E807392679470900E24445 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +96,14 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
+		62DF09CB232E9F2A1CCD12D0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				62DF0AA4FCD14B435F5BD417 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		E8CF16162648B54900DA9F54 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +127,6 @@
 				46E807412679484600E24445 /* Models */,
 				46E8073A2679471100E24445 /* Register */,
 				46E807392679470900E24445 /* Constant */,
-				46E80738267946E300E24445 /* Login */,
 				E8CF16222648B54A00DA9F54 /* AppDelegate.swift */,
 				E8CF16242648B54A00DA9F54 /* SceneDelegate.swift */,
 				E8CF16262648B54A00DA9F54 /* ViewController.swift */,
@@ -135,6 +137,7 @@
 				E8CF162D2648B54C00DA9F54 /* LaunchScreen.storyboard */,
 				E8CF16302648B54C00DA9F54 /* Info.plist */,
 				E8FCC63726784BDD001F1799 /* AccountViewController.swift */,
+				62DF09CB232E9F2A1CCD12D0 /* Login */,
 			);
 			path = UWIber;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				62DF0E04655A3CD6D8366AEF /* Location.swift in Sources */,
 				62DF054E83DFB336802A032C /* LoginResponse.swift in Sources */,
 				62DF0F8062A5850E4FCB5509 /* User.swift in Sources */,
+				62DF0E1D6991E7A68923D1FB /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

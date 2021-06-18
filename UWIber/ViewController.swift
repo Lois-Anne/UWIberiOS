@@ -59,15 +59,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
                 homeMap.addAnnotation(annotation)
             }
         }
-        var token = ""
-        var id = ""
-        let credentials = ["username": "shanis", "password": "swen2020"]
-        let loginRequest = AF.request("https://shaniscato.pythonanywhere.com/api/login/", method: .post, parameters: credentials)
-        loginRequest.responseDecodable(of: LoginResponse.self) { response in
-            guard let loginResponse = response.value else { return }
-            print(loginResponse)
-            token = loginResponse.token
-            id = String(loginResponse.id)
+
 
             let loginUrl = "https://shaniscato.pythonanywhere.com/api/user/\(id)/"
             let headers: HTTPHeaders = [
@@ -152,5 +144,4 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
 
     }
 
-}
 

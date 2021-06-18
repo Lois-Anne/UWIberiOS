@@ -9,9 +9,11 @@ import Foundation
 
 let app_id = ""
 let rest_key = ""
-let base_url = "https://shaniscato.pythonanywhere.com/api/"
-let register_url = "\(base_url)/register"
-let location_url = "\(base_url)/location"
+let BASE_URL = "https://shaniscato.pythonanywhere.com/api/"
+let REGISTER_URL = "\(BASE_URL)/register"
+let LOCATION_URL = "\(BASE_URL)/location"
+let LOGIN_URL = "\(BASE_URL)/login/"
+let token = ""
 struct Constant {
     struct Storyboard {
         static let homeViewController = "homeVC"
