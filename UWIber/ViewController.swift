@@ -41,6 +41,12 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
         self.placePins()
 
         rideBtn.isHidden = true
+        
+        locationView.layer.shadowColor = UIColor.black.cgColor
+        locationView.layer.shadowRadius = 3.0
+        locationView.layer.shadowOpacity = 0.2
+        locationView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        locationView.layer.masksToBounds = false
 
     }
     func configureMap(){

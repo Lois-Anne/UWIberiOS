@@ -21,13 +21,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "TOKEN") != "" {
-            // GO TO HOME SCREEN IF TOKEN IS FOUND
+            let tabController = self.storyboard?.instantiateViewController(withIdentifier: "tabC")
+            self.view.window?.rootViewController = tabController
+            self.view.window?.makeKeyAndVisible()
         }
         
     }
     @IBAction func loginDidTap(_ sender: Any) {
         if usernameField.text == nil && passwordField.text == nil {
-
+            
         } else {
             var token = ""
             var userId = ""
