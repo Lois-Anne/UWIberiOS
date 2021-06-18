@@ -22,8 +22,8 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func loginDidTap(_ sender: Any) {
-        let homeViewController = self.storyboard?.instantiateViewController(identifier: Constant.Storyboard.homeViewController) as? ViewController
-        self.view.window?.rootViewController = homeViewController
+        let tabController = self.storyboard?.instantiateViewController(withIdentifier: "tabC")
+        self.view.window?.rootViewController = tabController
         self.view.window?.makeKeyAndVisible()
     }
     
