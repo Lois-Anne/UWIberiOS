@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         self.view.window?.rootViewController = homeViewController
         self.view.window?.makeKeyAndVisible()
     }
+    
     @IBAction func noAccountDidTap(_ sender: Any) {
         let regViewController = self.storyboard?.instantiateViewController(identifier: Constant.Storyboard.regViewController) as? RegisterViewController
         self.view.window?.rootViewController = regViewController
