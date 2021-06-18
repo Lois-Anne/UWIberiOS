@@ -16,7 +16,7 @@ class APIManager{
         let headers: HTTPHeaders = [
         .contentType("application/json")
         ]
-        AF.request(register_url, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers: headers).response{
+        AF.request(REGISTER_URL, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers: headers).response{
             response in debugPrint(response)
             switch response.result{
             case .success(let data):
