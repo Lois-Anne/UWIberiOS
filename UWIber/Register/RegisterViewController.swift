@@ -41,7 +41,7 @@ extension RegisterViewController{
         let client = ClientModel(username: username, date_of_birth: "", phone_number: phoneNum)
 
         let request = AF.request(REGISTER_URL, method: .post)
-        request.responseDecodable(of: RegisterUser)
+//        request.responseDecodable(of: RegisterUser)
         APIManager.shareInstance.callRegisterAPI(register: register)
         
         

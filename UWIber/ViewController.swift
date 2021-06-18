@@ -34,8 +34,6 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         pickupTitle.font = UIFont.boldSystemFont(ofSize: 16.0)
-        let user: User = UserDefaults.standard.value(forKey: "USER") as! User
-        print("This is the stored user: \(user)")
 
 
         homeMap.delegate = self

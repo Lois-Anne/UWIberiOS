@@ -44,7 +44,6 @@ class LoginViewController: UIViewController {
                 let userInfoRequest = AF.request("\(BASE_USER_URL)/\(userId)/", headers: headers)
                 userInfoRequest.responseDecodable(of: User.self) {response in
                     guard let user = response.value else { return }
-                    UserDefaults.standard.set(user, forKey: "USER")
                     print(user)
                 }
                 self.view.window?.rootViewController = tabController
