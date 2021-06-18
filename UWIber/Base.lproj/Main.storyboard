@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bDU-ez-iaX">
             <objects>
-                <tabBarController id="bS0-RE-WNL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabC" id="bS0-RE-WNL" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1iP-Oo-SDA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -602,7 +602,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Wt3-Et-w9t"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

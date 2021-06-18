@@ -19,5 +19,6 @@ struct Constant {
         static let homeViewController = "homeVC"
         static let regViewController = "registerVC"
         static let loginViewController = "loginVC"
+        static let tabController = "tabC"
     }
 }
