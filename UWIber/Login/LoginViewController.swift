@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 
 class LoginViewController: UIViewController {
@@ -22,9 +23,35 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func loginDidTap(_ sender: Any) {
-        let tabController = self.storyboard?.instantiateViewController(withIdentifier: "tabC")
-        self.view.window?.rootViewController = tabController
-        self.view.window?.makeKeyAndVisible()
+        if usernameField.text == nil && passwordField.text == nil {
+
+        } else {
+            var token = ""
+            var userId = ""
+            let credentials = ["username": usernameField.text, "password": passwordField.text]
+            let loginRequest = AF.request(LOGIN_URL, method: .post, parameters: credentials)
+            loginRequest.responseDecodable(of: LoginResponse.self) { response in
+                guard let loginResponse = response.value else { return }
+                print(loginResponse)
+                token = loginResponse.token
+                userId = String(loginResponse.id)
+                UserDefaults.standard.set(token, forKey: "TOKEN")
+                UserDefaults.standard.set(userId, forKey: "ID")
+                let tabController = self.storyboard?.instantiateViewController(withIdentifier: "tabC")
+                let headers: HTTPHeaders = [
+                    "Authorization": "token \(token)"]
+
+                let userInfoRequest = AF.request("\(BASE_USER_URL)/\(userId)/", headers: headers)
+                userInfoRequest.responseDecodable(of: User.self) {response in
+                    guard let user = response.value else { return }
+                    UserDefaults.standard.set(user, forKey: "USER")
+                    print(user)
+                }
+                self.view.window?.rootViewController = tabController
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
+
     }
     
     @IBAction func noAccountDidTap(_ sender: Any) {

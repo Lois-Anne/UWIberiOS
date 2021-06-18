@@ -13,6 +13,7 @@ let BASE_URL = "https://shaniscato.pythonanywhere.com/api/"
 let REGISTER_URL = "\(BASE_URL)/register"
 let LOCATION_URL = "\(BASE_URL)/location"
 let LOGIN_URL = "\(BASE_URL)/login/"
+let BASE_USER_URL = "\(BASE_URL)/user/"
 let token = ""
 struct Constant {
     struct Storyboard {

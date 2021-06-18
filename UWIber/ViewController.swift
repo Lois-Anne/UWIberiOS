@@ -34,6 +34,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         pickupTitle.font = UIFont.boldSystemFont(ofSize: 16.0)
+        let user: User = UserDefaults.standard.value(forKey: "USER") as! User
+        print("This is the stored user: \(user)")
 
 
         homeMap.delegate = self
@@ -60,17 +62,6 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
             }
         }
 
-
-            let loginUrl = "https://shaniscato.pythonanywhere.com/api/user/\(id)/"
-            let headers: HTTPHeaders = [
-                "Authorization": "token \(token)"]
-
-            let userInfoRequest = AF.request(loginUrl, headers: headers)
-            userInfoRequest.responseDecodable(of: User.self) {response in
-                guard let user = response.value else { return }
-                print(user)
-            }
-        }
 
 
     }
@@ -144,4 +135,5 @@ class ViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
 
     }
 
+}
 
