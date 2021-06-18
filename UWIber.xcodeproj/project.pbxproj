@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24A02E83267CB94600F8219F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A02E82267CB94600F8219F /* LoginViewController.swift */; };
 		46E8073E2679474D00E24445 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E8073D2679474D00E24445 /* RegisterViewController.swift */; };
 		46E807402679476B00E24445 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E8073F2679476B00E24445 /* Constant.swift */; };
 		46E807432679485A00E24445 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E807422679485A00E24445 /* RegisterModel.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24A02E82267CB94600F8219F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		46E8073D2679474D00E24445 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		46E8073F2679476B00E24445 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		46E807422679485A00E24445 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
@@ -53,9 +55,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46E80738267946E300E24445 /* Login */ = {
+		24A02E81267CB92500F8219F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				24A02E82267CB94600F8219F /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -111,11 +114,11 @@
 		E8CF16212648B54A00DA9F54 /* UWIber */ = {
 			isa = PBXGroup;
 			children = (
+				24A02E81267CB92500F8219F /* Login */,
 				46E80744267949C500E24445 /* APIManager */,
 				46E807412679484600E24445 /* Models */,
 				46E8073A2679471100E24445 /* Register */,
 				46E807392679470900E24445 /* Constant */,
-				46E80738267946E300E24445 /* Login */,
 				E8CF16222648B54A00DA9F54 /* AppDelegate.swift */,
 				E8CF16242648B54A00DA9F54 /* SceneDelegate.swift */,
 				E8CF16262648B54A00DA9F54 /* ViewController.swift */,
@@ -216,6 +219,7 @@
 				E8CF16252648B54A00DA9F54 /* SceneDelegate.swift in Sources */,
 				E8FCC63426784A48001F1799 /* RequestRideController.swift in Sources */,
 				46E807432679485A00E24445 /* RegisterModel.swift in Sources */,
+				24A02E83267CB94600F8219F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,3 +12,10 @@ let rest_key = ""
 let base_url = "https://shaniscato.pythonanywhere.com/api/"
 let register_url = "\(base_url)/register"
 let location_url = "\(base_url)/location"
+struct Constant {
+    struct Storyboard {
+        static let homeViewController = "homeVC"
+        static let regViewController = "registerVC"
+        static let loginViewController = "loginVC"
+    }
+}

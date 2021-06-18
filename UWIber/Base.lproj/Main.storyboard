@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS0-RE-WNL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxo-nL-arX">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -49,7 +49,7 @@
         <!--Home-->
         <scene sceneID="ysI-EN-QPZ">
             <objects>
-                <viewController id="IHv-Dt-hil" customClass="ViewController" customModule="UWIber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="IHv-Dt-hil" customClass="ViewController" customModule="UWIber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyk-hg-3Ac">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +319,7 @@
         <!--Register View Controller-->
         <scene sceneID="pcS-Ec-B9W">
             <objects>
-                <viewController id="UeJ-8p-NFd" customClass="RegisterViewController" customModule="UWIber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerVC" id="UeJ-8p-NFd" customClass="RegisterViewController" customModule="UWIber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyW-uO-qyO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -586,10 +586,10 @@
             </objects>
             <point key="canvasLocation" x="-2710" y="-226"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="cOj-07-t3X">
             <objects>
-                <viewController id="Kxo-nL-arX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="Kxo-nL-arX" customClass="LoginViewController" customModule="UWIber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1T-Az-rtF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -645,6 +645,9 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTap:" destination="Kxo-nL-arX" eventType="touchUpInside" id="DKE-eH-2Mc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX9-hD-NWU">
                                 <rect key="frame" x="43" y="819.66666666666663" width="188" height="22"/>
@@ -679,6 +682,9 @@
                                 <state key="normal" title="Sign Up!">
                                     <color key="titleColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="noAccountDidTap:" destination="Kxo-nL-arX" eventType="touchUpInside" id="oW1-6x-DCj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f3z-Yb-Xzb"/>
@@ -713,6 +719,11 @@
                             <constraint firstItem="UVD-31-Ei1" firstAttribute="top" secondItem="z79-Qv-MgV" secondAttribute="bottom" constant="31" id="xsd-1p-a3E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="UVD-31-Ei1" id="2uk-b4-fAy"/>
+                        <outlet property="passwordField" destination="z79-Qv-MgV" id="YfM-Xv-G58"/>
+                        <outlet property="usernameField" destination="6qq-nB-9TH" id="uKD-KM-7iW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOw-Jf-sfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1139,6 +1150,9 @@
                     <connections>
                         <outlet property="carType" destination="JwL-KW-go3" id="gCj-NE-JCd"/>
                         <outlet property="carsPicker" destination="ysw-ln-TPq" id="Yy1-Mm-2KE"/>
+                        <outlet property="dropoffField" destination="fVd-cJ-VkD" id="Xtb-e4-3tA"/>
+                        <outlet property="pickupField" destination="lXQ-xh-oeA" id="oZT-NA-3wn"/>
+                        <outlet property="rideBtn" destination="PQT-Js-skG" id="PpM-QW-x7r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coG-d4-2ge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
